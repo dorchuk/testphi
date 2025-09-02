@@ -4,30 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>TripleTech • Secure Access</title>
+  <title>TripleTech — Secure Access</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <noscript>This demo requires JavaScript enabled.</noscript>
-
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-radial" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <div class="brand">
-      <div class="logo" aria-hidden="true">🔐</div>
-      <div class="brand-text">Triple<span>Tech</span></div>
-      <div class="tagline">Security Labs</div>
+  <header class="nav">
+    <div class="nav__brand">
+      <div class="brand__logo" aria-hidden="true">🛡️</div>
+      <div class="brand__text">Triple<span>Tech</span></div>
     </div>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#" aria-current="page">Solutions</a>
+      <a href="#">Platform</a>
+      <a href="#">Labs</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <section class="card">
-      <h1>Secure Access Panel</h1>
-      <p class="subtitle">Authorized users only • Activity is logged (demo)</p>
+  <main class="layout">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Security that feels invisible.<br/>Compliance that never slows you down.</h1>
+      <p class="hero__sub">
+        TripleTech helps teams protect identities, data and infrastructure with a zero-trust fabric,
+        live threat intel and automated response.
+      </p>
+      <ul class="hero__bullets" role="list">
+        <li><span>✓</span> Identity & Access Control</li>
+        <li><span>✓</span> Real-time Threat Detection</li>
+        <li><span>✓</span> Automated Incident Response</li>
+      </ul>
+      <div class="hero__cta">
+        <a class="btn btn--ghost" href="#">Learn more</a>
+        <a class="btn btn--primary" href="#login">Open Console</a>
+      </div>
+    </section>
+
+    <!-- Login Card -->
+    <section class="card" id="login" aria-labelledby="loginTitle">
+      <div class="card__header">
+        <div class="chip chip--green">Secure Portal</div>
+        <h2 id="loginTitle">Admin Console Login</h2>
+        <p class="card__sub">Authorized users only • Demo logging enabled</p>
+      </div>
 
       <form id="loginForm" autocomplete="off" novalidate>
         <div class="field">
@@ -39,23 +64,23 @@
           <label for="password">Access Key</label>
           <div class="password-wrap">
             <input type="password" id="password" name="key" placeholder="••••••••" required />
-            <button type="button" class="ghost" id="togglePwd" aria-label="Show password">👁️</button>
+            <button type="button" class="icon-btn" id="togglePwd" aria-label="Show password">👁️</button>
           </div>
         </div>
 
-        <button class="cta" type="submit" id="submitBtn">
+        <button class="btn btn--primary btn--full" type="submit" id="submitBtn">
           <span class="spinner" id="spinner" aria-hidden="true"></span>
           <span id="btnText">Authenticate</span>
         </button>
 
-        <div id="status" class="status" aria-live="polite"></div>
-      </form>
+        <div id="status" class="status" aria-live="polite" role="status"></div>
 
-      <ul class="badges" aria-label="security badges">
-        <li>Zero-Trust</li>
-        <li>Threat Intel</li>
-        <li>SOC Ready</li>
-      </ul>
+        <div class="aux">
+          <a href="#" class="aux__link">Forgot access?</a>
+          <span class="dot">•</span>
+          <a href="#" class="aux__link">Self-service request</a>
+        </div>
+      </form>
 
       <p class="disclaimer">
         This is a <strong>training demo</strong>. Do not enter real credentials.
@@ -64,8 +89,13 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    © 2025 TripleTech Systems • Simulation Environment
+  <footer class="footer">
+    <div>© 2025 TripleTech Systems</div>
+    <div class="footer__links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Status</a>
+    </div>
   </footer>
 
   <script defer src="script.js"></script>
