@@ -1,5 +1,5 @@
 // ✅ כתובת ה-Web App המעודכנת שלך
-const ENDPOINT = "https://script.google.com/macros/s/AKfycbw2W3OLf8shkBublDXHjd-33T392Szn_sQMLKQukLOtl8J72oHOa7m046fVwA2FE5Cq/exec";
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbz3Tdp3i_Fz2oCoc7U98TA5iUi9ay35vwZ1aL9Lph5WX5LrY8bmIFQvfMFAWBpsjwfO/exec";
 
 const form     = document.getElementById("loginForm");
 const emailEl  = document.getElementById("email");
