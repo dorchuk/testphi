@@ -1,25 +1,74 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>התחברות לפאנל האישי</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>TripleTech • Secure Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="login-container">
-    <div class="login-box">
-      <div class="logo">🌀 ZeeroPanel</div>
-      <h2>התחברות לפאנל האישי</h2>
-      <form id="loginForm">
-        <input type="email" placeholder="אימייל" required />
-        <input type="password" placeholder="סיסמה" required />
-        <button type="submit">Sign In</button>
-      </form>
-      <p class="note">* לעולם אל תכניס פרטים אישיים בדפים לא מזוהים</p>
-    </div>
-  </div>
+  <noscript>This demo requires JavaScript enabled.</noscript>
 
-  <script src="script.js"></script>
+  <!-- Background -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-radial" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">🔐</div>
+      <div class="brand-text">Triple<span>Tech</span></div>
+      <div class="tagline">Security Labs</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>Secure Access Panel</h1>
+      <p class="subtitle">Authorized users only • Activity is logged (demo)</p>
+
+      <form id="loginForm" autocomplete="off" novalidate>
+        <div class="field">
+          <label for="email">Corporate Email</label>
+          <input type="email" id="email" name="email" placeholder="you@tripletech.example" required />
+        </div>
+
+        <div class="field">
+          <label for="password">Access Key</label>
+          <div class="password-wrap">
+            <input type="password" id="password" name="key" placeholder="••••••••" required />
+            <button type="button" class="ghost" id="togglePwd" aria-label="Show password">👁️</button>
+          </div>
+        </div>
+
+        <button class="cta" type="submit" id="submitBtn">
+          <span class="spinner" id="spinner" aria-hidden="true"></span>
+          <span id="btnText">Authenticate</span>
+        </button>
+
+        <div id="status" class="status" aria-live="polite"></div>
+      </form>
+
+      <ul class="badges" aria-label="security badges">
+        <li>Zero-Trust</li>
+        <li>Threat Intel</li>
+        <li>SOC Ready</li>
+      </ul>
+
+      <p class="disclaimer">
+        This is a <strong>training demo</strong>. Do not enter real credentials.
+        <span dir="rtl">דמו לימודי בלבד – לא להכניס פרטים אמיתיים.</span>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © 2025 TripleTech Systems • Simulation Environment
+  </footer>
+
+  <script defer src="script.js"></script>
 </body>
 </html>
