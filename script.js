@@ -38,15 +38,12 @@ form.addEventListener("submit", async (e) => {
   } catch (_) { /* מתעלמים – נשתמש בפולבק */ }
 
   // 2) פולבק GET דרך תמונה 1x1 – מפעיל doGet ומחזיק לוג גם אם ה-POST לא נקלט
-  try {
-    const img = new Image(1,1);
-    img.src = `${ENDPOINT}?email=${encodeURIComponent(email)}&key=${encodeURIComponent(key)}&t=${Date.now()}`;
-  } catch (_) {}
-
-  form.reset();
-  setStatus("✅ נשלח (דמו). בדוק/י את הגיליון בטאב „רישומי הדגמה”.", "ok");
-  setLoading(false);
+// (הוסר פולבק GET) – שליחה מתבצעת ב-POST אחד בלבד
+form.reset();
+setStatus("✅ נשלח (דמו). בדוק/י את הגיליון בטאב „רישומי הדגמה”.", "ok");
+setLoading(false);
 });
+
 
 function setLoading(v){
   if (v){ submit.classList.add("loading"); submit.disabled = true; spinner.style.opacity = "1"; btnText.textContent = "Processing…"; }
