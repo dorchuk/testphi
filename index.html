@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>Sign In</title>
-  <style>
-    body { font-family: Arial; display: flex; flex-direction: column; align-items: center; margin-top: 100px; }
-    input { padding: 10px; margin: 10px; width: 300px; }
-    button { padding: 10px 20px; background: green; color: white; border: none; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>התחברות לפאנל האישי</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h2>🔒 התחברות לחשבון</h2>
-  <input type="text" id="email" placeholder="Email">
-  <input type="password" id="password" placeholder="Password">
-  <button onclick="handleLogin()">Sign In</button>
-
-  <div id="output" style="margin-top: 30px; color: red;"></div>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="logo">🌀 ZeeroPanel</div>
+      <h2>התחברות לפאנל האישי</h2>
+      <form id="loginForm">
+        <input type="email" placeholder="אימייל" required />
+        <input type="password" placeholder="סיסמה" required />
+        <button type="submit">Sign In</button>
+      </form>
+      <p class="note">* לעולם אל תכניס פרטים אישיים בדפים לא מזוהים</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

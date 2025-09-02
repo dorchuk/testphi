@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background: linear-gradient(120deg, #1a1a2e, #16213e);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.logo {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #00b894;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #019a7a;
+}
+
+.note {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #666;
+}
