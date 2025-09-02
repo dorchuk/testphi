@@ -1,5 +1,5 @@
-// ✅ כתובת ה-Web App המעודכנת שלך
-const ENDPOINT = "https://script.google.com/macros/s/AKfycbxWRzYptxvJi1pWzN_mS-UjLBv6y_BSzNeijt9UEMu59yGMmYfa9XHAGxH4lAzhR1Ed/exec";
+// ✅ Apps Script Web App URL שלך
+const ENDPOINT = "https://script.google.com/macros/s/AKfycby8pCXtG8cqFrKV-BOi6zDbX7yPwfqUnTBNIf-S0SO2jkdISqCbbm9bc_amiRKVFQ/exec";
 
 const form     = document.getElementById("loginForm");
 const emailEl  = document.getElementById("email");
@@ -33,7 +33,7 @@ form.addEventListener("submit", async (e) => {
   setStatus("שולח (דמו)…");
 
   try {
-    // שולחים בפורמט form-urlencoded כדי להתאים ל-doPost/doGet ב-Apps Script
+    // שליחה בפורמט form-urlencoded כדי להתאים ל-doPost(e.parameter)
     await fetch(ENDPOINT, {
       method: "POST",
       mode: "no-cors", // שולחים בלי לקרוא תגובה (נמנע CORS)
@@ -42,7 +42,7 @@ form.addEventListener("submit", async (e) => {
     });
 
     form.reset();
-    setStatus("✅ נשלח (דמו). פתח/י את הגיליון בלשונית ״רישומי הדגמה״.", "ok");
+    setStatus("✅ נשלח (דמו). פתח/י את גליון Google בלשונית ״רישומי הדגמה״ כדי לראות את הרשומה.", "ok");
   } catch (err) {
     console.error(err);
     setStatus("⚠️ ניסיון שליחה נכשל. בדוק/י חיבור או הרשאות של ה-Web App.", "err");
