@@ -1,5 +1,5 @@
 // ✅ ה-URL של ה-Web App שלך (אם תפרוס מחדש ויקבל URL חדש – תעדכן כאן)
-const ENDPOINT = "https://script.google.com/macros/s/AKfycbyZLQQntQP0whK9UM0jZAYvKClAOYYtPTLwUvvjzcB9ctmRuFa9D7Z6mudTLGL3hSdY/exec";
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbwAywdREr6Y7SVrOTtNbm6yz-zwMc0qJHufenZbwMTGE8q5mHchD-OLZrT833g0bS79/exec";
 
 const form     = document.getElementById("loginForm");
 const emailEl  = document.getElementById("email");
