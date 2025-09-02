@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In</title>
+  <style>
+    body { font-family: Arial; display: flex; flex-direction: column; align-items: center; margin-top: 100px; }
+    input { padding: 10px; margin: 10px; width: 300px; }
+    button { padding: 10px 20px; background: green; color: white; border: none; }
+  </style>
+</head>
+<body>
+  <h2>🔒 התחברות לחשבון</h2>
+  <input type="text" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="handleLogin()">Sign In</button>
+
+  <div id="output" style="margin-top: 30px; color: red;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
